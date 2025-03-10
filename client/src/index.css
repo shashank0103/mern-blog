@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 @import 'flowbite';
+
+.gradient-button {
+    background-image: linear-gradient(to right, #ec4899, #8b5cf6);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+    background-size: 200% auto; /* For animation */
+  }
+  
+  .gradient-button:hover {
+    background-position: right center; /* Gradient animation */
+    background-image: linear-gradient(to right, #db2777, #7c3aed);
+  }

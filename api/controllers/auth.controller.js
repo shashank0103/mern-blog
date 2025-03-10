@@ -1,12 +1,12 @@
-import User from '../models/user.model.js';
-import bcryptjs from 'bcryptjs';
-import { errorHandler } from '../utils/error.js';
+import User from "../models/user.model.js";
+import bcryptjs from "bcryptjs";
+import { errorHandler } from "../utils/error.js";
 
-export const signup = async (req, res,next) => {
+export const signup = async (req, res, next) => {
   const { username, email, password } = req.body;
-  
+
   if (!username || !email || !password) {
-    next(errorHandler(400,"all fields are required"));
+    next(errorHandler(400, "All fields are required"));
   }
 
   try {
@@ -24,9 +24,7 @@ export const signup = async (req, res,next) => {
 
     await newUser.save();
     res.status(201).json({ message: "SignUp successful" });
-
   } catch (error) {
     next(error);
   }
 };
-

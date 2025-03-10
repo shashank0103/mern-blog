@@ -54,16 +54,13 @@ export default function Header() {
           <FaMoon className="w-5 h-5" />
         </Button>
         <Link to="/sign-in">
-  <Button
-    className="relative px-6 py-2 text-purple-600 font-semibold border-2 border-purple-500 transition-all duration-300 ease-in-out 
-    hover:bg-purple-500 hover:text-white hover:shadow-lg"
-  >
-    Sign In
-  </Button>
-</Link>
-
-
-      
+          <button
+            className="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg
+                       transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600"
+          >
+            Sign In
+          </button>
+        </Link>
 
         {/* Mobile Menu Toggle Button */}
         <button className="lg:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none" onClick={toggleMenu} aria-label="Toggle Menu">
